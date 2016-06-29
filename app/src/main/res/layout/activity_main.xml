@@ -31,4 +31,12 @@
         android:layout_height="wrap_content"
         android:text="@string/button2"
         android:textSize="12sp"/>
+    <Button
+        android:id="@+id/toPhotoAct"
+        android:layout_below="@+id/toAct4R"
+        android:layout_centerHorizontal="true"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button3"
+        android:textSize="12sp"/>
 </RelativeLayout>

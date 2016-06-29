@@ -4,4 +4,8 @@
     <string name="Act1">Independent Activity</string>
     <string name="button2">Start Activity for Result</string>
     <string name="hint1">Enter string to send to parent act</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button3">Photo Capture Acivity</string>
 </resources>
