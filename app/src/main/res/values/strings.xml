@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Activities Demo</string>
+    <string name="button1">Start Another Activity</string>
+    <string name="Act1">Independent Activity</string>
+    <string name="button2">Start Activity for Result</string>
+    <string name="hint1">Enter string to send to parent act</string>
+</resources>
