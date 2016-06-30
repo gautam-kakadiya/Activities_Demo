@@ -32,7 +32,10 @@
         <activity
             android:name=".PhotoCaptureActivity"
             android:label="Photo Capture Activity"></activity>
-        <activity android:name=".FragmentCommAct"></activity>
+        <activity
+            android:name=".FragmentCommAct"
+            android:label="Fragment Communication Act">
+        </activity>
     </application>
 
 </manifest>

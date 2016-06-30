@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final int ACT_FOR_RESULT_CODE = 1 ;
     private TextView result;
-    private Button toAct1button,act4rslt,photoCapActb;
+    private Button toAct1button,act4rslt,photoCapActb,fragCommActb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toAct1button = (Button) findViewById(R.id.toAct1);
         act4rslt = (Button) findViewById(R.id.toAct4R);
         photoCapActb = (Button) findViewById(R.id.toPhotoAct);
+        fragCommActb = (Button) findViewById(R.id.toFragComm);
         toAct1button.setOnClickListener(this);
         act4rslt.setOnClickListener(this);
         photoCapActb.setOnClickListener(this);
+        fragCommActb.setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(id==R.id.toPhotoAct){
             Intent intent = new Intent(this,PhotoCaptureActivity.class);
+            startActivity(intent);
+        }
+        if(id==R.id.toFragComm){
+            Intent intent = new Intent(this,FragmentCommAct.class);
             startActivity(intent);
         }
     }

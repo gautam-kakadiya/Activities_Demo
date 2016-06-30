@@ -1,13 +1,20 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#80cbc4"
     tools:context="com.example.sysadmin.activitiesdemo.Frag1">
 
     <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/frag1_edt"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter data to set to frag2"/>
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:id="@+id/frag1_tv"
+        android:layout_below="@+id/frag1_edt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"/>
+</RelativeLayout>

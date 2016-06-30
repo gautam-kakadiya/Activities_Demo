@@ -39,4 +39,12 @@
         android:layout_height="wrap_content"
         android:text="@string/button3"
         android:textSize="12sp"/>
+    <Button
+        android:id="@+id/toFragComm"
+        android:layout_below="@+id/toPhotoAct"
+        android:layout_centerHorizontal="true"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button3"
+        android:textSize="12sp"/>
 </RelativeLayout>

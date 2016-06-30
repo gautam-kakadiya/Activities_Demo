@@ -2,10 +2,14 @@ package com.example.sysadmin.activitiesdemo;
 
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 
 /**
@@ -18,10 +22,15 @@ public class Frag2 extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    public static final String TAG = "frag2" ;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private TextView tv;
+    private String data;
+    private EditText edt;
+    //private Fragment f=null;
 
 
     public Frag2() {
@@ -59,7 +68,30 @@ public class Frag2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_frag2, container, false);
+        View v = inflater.inflate(R.layout.fragment_frag2, container, false);
+        tv= (TextView) v.findViewById(R.id.frag2_tv);
+        edt = (EditText) v.findViewById(R.id.frag2_edt);
+        return v;
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Fragment f = getTargetFragment();
+        if(f instanceof Frag1){
+            data =  ((Frag1)f).getData();
+            tv.setText(data);
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Fragment f = getTargetFragment();
+        Log.d("Frag2","onPause");
+        if(f instanceof Frag1) {
+            ((Frag1) f).setToTextView(edt.getText().toString());
+            Log.d("Frag2","onPause inside if");
+        }
+    }
 }
